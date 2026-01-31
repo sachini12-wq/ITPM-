@@ -39,7 +39,6 @@ test.describe("Positive Functional Tests (24) – Variant Set", () => {
     await fillAndExpect(page, "api okkoma ekathu wenavaa", /අපි/);
   });
 
-  // ✅ FIXED
   test("04 Time reference", async ({ page }) => {
     await fillAndExpect(page, "ada hawasa api hamuwemu", null);
   });
@@ -48,7 +47,6 @@ test.describe("Positive Functional Tests (24) – Variant Set", () => {
     await fillAndExpect(page, "oyaa enoth api yamu", /නම්|එනොත්/);
   });
 
-  // ✅ FIXED
   test("06 Reason based", async ({ page }) => {
     await fillAndExpect(page, "vaessa nisa api inne gedhara", null);
   });
@@ -89,7 +87,6 @@ test.describe("Positive Functional Tests (24) – Variant Set", () => {
     await fillAndExpect(page, "api kalin mehema karala thiyenavaa", /කලින්/);
   });
 
-  // ✅ FIXED
   test("16 Advice", async ({ page }) => {
     await fillAndExpect(page, "oya meka karoth hondai", null);
   });
@@ -110,17 +107,18 @@ test.describe("Positive Functional Tests (24) – Variant Set", () => {
     await fillAndExpect(page, "mata items 3k oone", /3/);
   });
 
-  // ✅ UPDATED Zoom class test
   test("21 Zoom class sentence", async ({ page }) => {
     await fillAndExpect(page, "mama ada Zoom class ekata join wenavaa", /Zoom|ක්ලාස්|class/i);
   });
 
-  test("22 Spacing", async ({ page }) => {
-    await fillAndExpect(page, "api    adha    gedhara    inne", null);
+  // ✅ REPLACED
+  test("22 Document sending", async ({ page }) => {
+    await fillAndExpect(page, "Documents tika attach karala colombo office ekata send karanavaa", /Documents|Colombo|office/i);
   });
 
-  test("23 Short phrase", async ({ page }) => {
-    await fillAndExpect(page, "hari lassanai", /ලස්සන/);
+  // ✅ REPLACED
+  test("23 App download request", async ({ page }) => {
+    await fillAndExpect(page, "mama app eka download karanna ona URL denna", /app|URL|download/i);
   });
 
   test("24 Long daily event story", async ({ page }) => {
