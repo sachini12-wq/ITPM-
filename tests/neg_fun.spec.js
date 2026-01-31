@@ -16,7 +16,7 @@ test.describe("Negative Functional Tests (10) - Robustness", () => {
 
   test("Neg_Fun_0013 - Mixed language + numbers", async ({ page }) => {
     await page.goto("https://www.swifttranslator.com/");
-    await page.locator("#singlish").fill("mama 123 going home");
+    await page.locator("#singlish").fill("mama 123 going home tomorrow for a function");
     await expect(page.locator("#sinhala")).toBeVisible();
   });
 
